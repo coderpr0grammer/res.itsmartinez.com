@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" style="width:100%; height:100%;">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Daniel Martinez's Resume</title>
+    <style>
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background-color: rgb(209, 209, 209);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        #resumeButton {
+            font-size: 22px;
+            padding: 20px;
+            background-color: #FFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #resumeFrame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        var reloadDelay = 250; // time in milliseconds (0.25 seconds)
+        var resumeFrame = null;
+
+        function reloadFrame() {
+            // Reload the iframe source to force a refresh
+            var originalSrc = resumeFrame.src;
+            resumeFrame.src = '';
+            resumeFrame.src = originalSrc;
+        }
+
+        window.onload = function() {
+            resumeFrame = document.getElementById('resumeFrame');
+            setTimeout(reloadFrame, reloadDelay);
+        }
+    </script>
+</head>
+<body>
+    <iframe id="resumeFrame" src="https://drive.google.com/file/d/1cpUesF9EnwKpGGGFrUBXB4Tx2cKPjLmA/pub?embedded=true"></iframe>
+<!--     <button id="resumeButton" onclick="window.location.href='https://docs.google.com/viewerng/viewer?url=https://github.com/MusaAqeel/resume/raw/main/Musa_Aqeel_GH_Resume_2023.pdf">RESUME</button> -->
+</body>
+</html>
